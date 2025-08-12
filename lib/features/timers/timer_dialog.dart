@@ -30,13 +30,13 @@ class TimerInstance {
 class TimerDialog extends StatefulWidget {
   final String Function(String) t;
   final List<String> steps;
-  const _TimerDialog({required this.t, required this.steps});
+  const TimerDialog({required this.t, required this.steps});
 
   @override
-  State<_TimerDialog> createState() => _TimerDialogState();
+  State<TimerDialog> createState() => _TimerDialogState();
 }
 
-class TimerDialogState extends State<_TimerDialog> {
+class _TimerDialogState extends State<TimerDialog> {
   final _nameCtrl = TextEditingController();
   final _customTimeCtrl = TextEditingController();
   int? _selectedSeconds;

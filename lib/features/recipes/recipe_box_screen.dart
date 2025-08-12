@@ -106,52 +106,11 @@ Widget recipeBoxScreen(BuildContext context, String Function(String) t) {
   }
 
 
-  RecipeModel recipeById(String id) => recipes.firstWhere((r) => r.id == id);
-
-  String _mealLabel(String meal, String Function(String) t) {
-    switch (meal) {
-      case 'breakfast':
-        return t('breakfast');
-      case 'lunch':
-        return t('lunch');
-      case 'dinner':
-        return t('dinner');
-      case 'snack':
-        return t('snack');
-      default:
-        return meal;
     }
-  }
 
-  num convertQty(num qty, String unit, AppUnits units) {
-    if (units == AppUnits.metric) return qty;
-    switch (unit) {
-      case 'g':
-        return qty / 28.3495;
-      case 'kg':
-        return qty * 2.20462;
-      case 'ml':
-        return qty / 29.5735;
-      case 'l':
-        return qty * 33.814;
-      case 'tsp':
-        return qty * 0.166667;
-      case 'tbsp':
-        return qty * 0.0625;
-      case 'cup':
-        return qty;
-      case 'unit':
-        return qty;
-      default:
-        return qty;
     }
-  }
 
-  String unitLabel(String unit, AppUnits units) {
-    if (units == AppUnits.metric) {
-      return unit;
-    }
-    switch (unit) {
+      switch (unit) {
       case 'g':
         return 'oz';
       case 'kg':
@@ -173,8 +132,4 @@ Widget recipeBoxScreen(BuildContext context, String Function(String) t) {
     }
   }
 
-  String fmt(num v) {
-    if (v == v.roundToDouble()) return v.toStringAsFixed(0);
-    return v.toStringAsFixed(2);
   }
-}

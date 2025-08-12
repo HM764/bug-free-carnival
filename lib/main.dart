@@ -1,11 +1,12 @@
 library app;
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'features/timers/timer_manager.dart';
 import 'data/models.dart';
+import 'data/sample_data.dart';
 import 'l10n/i18n.dart';
-import 'data/sample_dataAppLanguage language;
-    'seconds': 's',
+import 'features/timers/timer_dialog.dart';
+import 'features/timers/timer_manager.dart';
+
 part 'features/planner/planner_tab.dart';
 part 'features/recipes/recipes_tab.dart';
 part 'features/shopping/shopping_tab.dart';
@@ -14,6 +15,7 @@ part 'features/recipes/add_recipe_dialog.dart';
 part 'features/recipes/recipe_summary_sheet.dart';
 part 'features/recipes/recipe_box_screen.dart';
 part 'features/recipes/recipes_in_planner_screen.dart';
+
    2,
   });
 }
